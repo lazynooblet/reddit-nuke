@@ -47,12 +47,6 @@ except Exception as e:
 # announce user
 logging.debug(f'Signed in as user: {reddit.user.me()}')
 
-# check scopes
-scopes = reddit.auth.scopes()
-if scopes != {"*"}:
-    logging.warn(f'Required scope (all: *) not obtained, scopes are: {scopes}')
-    replaceAlphabet = string.ascii_letters + string.digits
-
 logging.debug("Fetching user data")
 try:
     redditor = reddit.redditor(settings['REDDIT_USER'])
