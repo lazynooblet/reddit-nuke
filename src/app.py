@@ -69,6 +69,7 @@ else:
 # remove deprecation warning
 reddit.validate_on_submit = True
 
+# edit and delete comments
 comments = 0
 for comment in redditor.comments.new():
     sleep(REQUEST_DELAY_IN_SECONDS)
@@ -88,6 +89,7 @@ for comment in redditor.comments.new():
     except Exception as e:
         logging.warn(f'Failed to delete comment {comment.id}: {str(e)}')
 
+# edit and delete posts
 logging.debug('Performing action: Delete posts')
 posts = 0
 for post in redditor.submissions.new():
