@@ -3,6 +3,7 @@
 - Will edit, then delete all comments, and delete all posts
 - By default edits comments with a random string
 - Logs to stdout
+- Each deletion request is delayed by 5 seconds to prevent reaching API limit (edit REQUEST_DELAY_IN_SECONDS constant to adjust)
 
 Reddit is periodically restoring comments, so suggest to run this on cron
 
