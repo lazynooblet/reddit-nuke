@@ -6,6 +6,8 @@
 
 Reddit is periodically restoring comments, so suggest to run this on cron
 
+This was created as a basis to learn how to package a python script into a docker container.
+
 ## Run using docker-compose
 1. Clone this repo into ./build
 2. Copy the example docker-compose.yml, add reddit credentials (notice it references ./build)

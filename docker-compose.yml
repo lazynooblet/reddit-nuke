@@ -1,0 +1,30 @@
+version: '3.1'
+
+services:
+  reddit-nuke:
+    build: ./build
+    image: python/reddit-nuke
+    container_name: reddit-nuke
+    restart: on-failure:3
+    networks:
+      - net
+    environment:
+      # required fields
+      - REDDIT_API_CLIENT_ID=
+      - REDDIT_API_CLIENT_SECRET=
+      - REDDIT_USER=
+      - REDDIT_PASS=
+
+      # optional fields
+      
+      # Adjust user agent that is offered to reddit API
+      # Default: "Mozilla/5.0 (X11; Linux i686; rv:109.0) Gecko/20100101 Firefox/114.0"
+      # - APP_USER_AGENT=
+
+      # Replace comment with this string, defaults to '#random#' which generates a 32-character random string per comment prior to delete
+      # Default: #random#
+      # - APP_REPLACE_STRING=
+
+networks:
+  net:
+    driver: bridge
