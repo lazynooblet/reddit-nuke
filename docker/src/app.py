@@ -4,7 +4,7 @@ import os
 import logging
 import secrets
 import string
-from random import random
+from random import random,randint
 from datetime import datetime
 from time import sleep, time
 
@@ -111,7 +111,7 @@ while True:
         break
 
     # wait until next iteration
-    t = random(settings['APP_MIN_SLEEP'], settings['APP_MAX_SLEEP'])
+    t = randint(settings['APP_MIN_SLEEP'], settings['APP_MAX_SLEEP'])
     logging.info(f'Next wake at {str(datetime.fromtimestamp(time() + t))} ({t}s)')
     sleep(random.randint())
 
