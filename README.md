@@ -13,7 +13,7 @@ This was created as a basis to learn how to package a python script into a docke
 1. Clone this repo
 2. Copy the example docker-compose.yml,example to docker-compose.yml
 3. Add reddit credentials, and edit any other options
-4. docker-compose up
+4. docker-compose up --build
 
 ## Setting up Reddit user API
 1. Visit Reddit app preferences at https://www.reddit.com/prefs/apps
