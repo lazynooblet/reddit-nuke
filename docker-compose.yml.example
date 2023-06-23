@@ -32,6 +32,11 @@ services:
       # uncomment to have the container run once and then exit
       # - APP_RUN_ONCE=yes
 
+    # uncomment the volumes for accurate logging timestamps, at least on linux
+    # volumes:
+    #     - /etc/timezone:/etc/timezone:ro
+    #     - /etc/localtime:/etc/localtime:ro
+
 networks:
   net:
     driver: bridge
