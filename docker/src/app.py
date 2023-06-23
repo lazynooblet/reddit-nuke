@@ -65,7 +65,7 @@ while True:
 
         if settings['APP_REPLACE_STRING'] == '#random#':
             logging.debug('Performing action: Edit (with random string) and delete comments')
-            replaceAlphabet = string.ascii_letters + string.digits
+            replaceAlphabet = string.ascii_letters + string.digits + '     '
         else:
             logging.debug('Performing action: Edit (with:{string}) and delete comments'.format(string=settings['APP_REPLACE_STRING']))
 
@@ -79,7 +79,7 @@ while True:
             comments += 1
             replaceString = settings['APP_REPLACE_STRING']
             if (replaceString == '#random#'):
-                replaceString = ''.join(secrets.choice(replaceAlphabet) for i in range(32))
+                replaceString = ''.join(secrets.choice(replaceAlphabet) for i in range(random.randint(32,64)))
                 logging.info(f'Nuking comment id:{comment.id} ({replaceString})')
             else:
                 logging.info(f'Nuking comment id:{comment.id}')
