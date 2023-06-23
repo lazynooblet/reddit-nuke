@@ -25,6 +25,13 @@ services:
       # Default: #random#
       # - APP_REPLACE_STRING=
 
+      # Range of time to wait between each run
+      # - APP_MIN_SLEEP=600
+      # - APP_MAX_SLEEP=3600
+
+      # uncomment to have the container run once and then exit
+      # - APP_RUN_ONCE=yes
+
 networks:
   net:
     driver: bridge
