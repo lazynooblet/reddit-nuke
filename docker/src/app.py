@@ -25,8 +25,8 @@ settings = {
     'APP_USER_AGENT': os.getenv('APP_USER_AGENT') or "Mozilla/5.0 (X11; Linux i686; rv:109.0) Gecko/20100101 Firefox/114.0",
     'APP_REPLACE_STRING': os.getenv('APP_REPLACE_STRING') or "#random#",
     'APP_RUN_ONCE': os.getenv('APP_RUN_ONCE') or "no",
-    'APP_MIN_SLEEP': os.getenv('APP_MIN_SLEEP') or 300,
-    'APP_MAX_SLEEP': os.getenv('APP_MIN_SLEEP') or 3600
+    'APP_MIN_SLEEP': os.getenv('APP_MIN_SLEEP') or "300",
+    'APP_MAX_SLEEP': os.getenv('APP_MAX_SLEEP') or "3600"
 }
 
 # check all settings are configured
