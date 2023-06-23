@@ -5,14 +5,15 @@
 - Logs to stdout
 - Each deletion request is delayed by 5 seconds to prevent reaching API limit (edit REQUEST_DELAY_IN_SECONDS constant to adjust)
 
-Reddit is periodically restoring comments, so suggest to run this on cron
+Reddit is periodically restoring comments, this will continuously remove them.
 
 This was created as a basis to learn how to package a python script into a docker container.
 
 ## Run using docker-compose
-1. Clone this repo into ./build
-2. Copy the example docker-compose.yml, add reddit credentials (notice it references ./build)
-3. docker-compose up
+1. Clone this repo
+2. Copy the example docker-compose.yml,example to docker-compose.yml
+3. Add reddit credentials, and edit any other options
+4. docker-compose up
 
 ## Setting up Reddit user API
 1. Visit Reddit app preferences at https://www.reddit.com/prefs/apps
